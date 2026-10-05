@@ -1,19 +1,23 @@
 # Bài 1: Khởi tạo Local Repository và Cấu hình danh tính
 
-## 1. Khởi tạo Git Repository
-
-Lệnh đã sử dụng:
+## 1. Khởi tạo Repository
 
 ```bash
 git init
 ```
 
-## 2. Cấu hình danh tính Local
+Kết quả:
+
+```text
+Initialized empty Git repository in C:/Users/Admin/Documents/it209/SS4/bai1/.git/
+```
+
+## 2. Cấu hình danh tính cục bộ
 
 Cấu hình tên:
 
 ```bash
-git config --local user.name "Ta Xuan Chien"
+git config --local user.name "Xuan Chien"
 ```
 
 Cấu hình email:
@@ -29,25 +33,51 @@ git config --local user.name
 git config --local user.email
 ```
 
-## 3. Tạo file
+Kết quả:
 
-```bash
-echo "# IT209 - Session 04 - Exercise 1" > README.md
+```text
+Xuan Chien
+xuanchien319@gmail.com
 ```
 
-## 4. Đưa file vào Staging Area
+## 3. Đưa file vào Staging Area
 
 ```bash
 git add README.md
 ```
 
-## 5. Commit đầu tiên
+Kiểm tra:
+
+```bash
+git status
+```
+
+Kết quả:
+
+```text
+On branch master
+
+No commits yet
+
+Changes to be committed:
+        new file:   README.md
+```
+
+## 4. Commit đầu tiên
 
 ```bash
 git commit -m "Initial commit"
 ```
 
-## 6. Kiểm tra lịch sử commit
+Kết quả:
+
+```text
+[master (root-commit) 1fbbdb7] Initial commit
+1 file changed, 76 insertions(+)
+create mode 100644 README.md
+```
+
+## 5. Kiểm tra lịch sử Commit
 
 ```bash
 git log --oneline
@@ -56,21 +86,26 @@ git log --oneline
 Kết quả:
 
 ```text
-Initial commit
+1fbbdb7 (HEAD -> master) Initial commit
 ```
 
-## 7. Kiểm tra cấu hình Local
+## 6. Kiểm tra cấu hình Local
 
 ```bash
 git config --local --list
 ```
 
-Kết quả cho thấy repository đã được cấu hình `user.name` và `user.email` ở cấp độ local.
+Kết quả:
 
-## 8. Trạng thái Repository
-
-```bash
-git status
+```text
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+user.name=Xuan Chien
+user.email=xuanchien319@gmail.com
 ```
 
-Sau khi commit thành công, working tree không còn file chưa commit.
+## 7. Kết luận
+
+Repository Git local đã được khởi tạo thành công. Danh tính tác giả đã được cấu hình ở cấp độ local bằng `--local`. File `README.md` đã được đưa vào Staging Area và commit đầu tiên đã được tạo thành công với thông điệp `Initial commit`.
