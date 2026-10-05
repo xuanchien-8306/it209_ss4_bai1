@@ -19,7 +19,7 @@ git config --local user.name "Ta Xuan Chien"
 Cấu hình email:
 
 ```bash
-git config --local user.email "EMAIL_CUA_BAN"
+git config --local user.email "xuanchien319@gmail.com"
 ```
 
 Kiểm tra:
